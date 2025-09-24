@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Loja - GameStore</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 15px;
+    }
+    .card {
+      transition: transform 0.3s;
+      margin-bottom: 20px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+    .navbar-brand img {
+      border: 2px solid #fff;
+    }
+    .row.g-4 > [class*='col-'] {
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <!-- Logo circular pequena -->
+        <img src="../img/logo.png" 
+             alt="Logo" 
+             class="rounded-circle d-inline-block align-text-top me-2"
+             style="width:40px; height:40px; object-fit:cover;">
+        Mundo de los Videojuegos
+      </a>
+      <!-- Indicadores -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="loja.html">Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="novidades.html">Novidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1 class="mb-4"><i class="fa-solid fa-gamepad"></i> Nossos Produtos</h1>
+    
+    <!-- Carousel (SlideShow) -->
+    <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+      </div>
+      
+      <div class="carousel-inner">
+        <!-- PlayStation 5 -->
+        <div class="carousel-item active">
+          <img src="../img/ps5.png" class="d-block w-100" alt="PlayStation 5">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>PlayStation 5</h5>
+            <p>O console mais avançado da Sony. Experimente o próximo nível de jogabilidade.</p>
+            <a href="#ps5" class="btn btn-primary">Ver Detalhes</a>
+          </div>
+        </div>
+        
+        <!-- Xbox Series X -->
+        <div class="carousel-item">
+          <img src="../img/xbox.png" class="d-block w-100" alt="Xbox Series X">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Xbox Series X</h5>
+            <p>Console mais potente da Microsoft, com gráficos em 4K e desempenho excepcional.</p>
+            <a href="#xbox" class="btn btn-primary">Ver Detalhes</a>
+          </div>
+        </div>
+        
+        <!-- God of War: Ragnarok -->
+        <div class="carousel-item">
+          <img src="../img/gow.png" class="d-block w-100" alt="God of War Ragnarok">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>God of War: Ragnarok</h5>
+            <p>A continuação épica da jornada de Kratos e Atreus no mundo nórdico.</p>
+            <a href="#gow" class="btn btn-primary">Ver Detalhes</a>
+          </div>
+        </div>
+        
+        <!-- Elden Ring -->
+        <div class="carousel-item">
+          <img src="../img/elden.png" class="d-block w-100" alt="Elden Ring">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Elden Ring</h5>
+            <p>Um RPG de ação em mundo aberto com exploração e desafios intensos.</p>
+            <a href="#elden" class="btn btn-primary">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Botões de navegação -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Área principal com produtos e asides -->
+    <div class="row">
+
+      <!-- Cards -->
+      <div class="col-md-9">
+        <div class="row g-4">
+          <!-- PlayStation 5 -->
+          <div class="col-md-4" id="ps5">
+            <div class="card h-100">
+              <img src="../img/play.png" class="card-img-top" alt="PlayStation 5">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">PlayStation 5</h5>
+                <p class="card-text flex-grow-1">O console mais avançado da Sony.</p>
+                <p class="fw-bold text-primary">R$ 4.499,90</p>
+                <button class="btn btn-success mt-auto">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PlayStation 4 -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="../img/ps4.webp" class="card-img-top" alt="PlayStation 4">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">PlayStation 4</h5>
+                <p class="card-text flex-grow-1">Console da Sony com ótimo desempenho gráfico e vasta biblioteca de jogos exclusivos.</p>
+                <p class="fw-bold text-primary">R$ 1.599,90</p>
+                <button class="btn btn-success mt-auto">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Xbox Series X -->
+          <div class="col-md-4" id="xbox">
+            <div class="card h-100">
+              <img src="../img/x.png" class="card-img-top" alt="Xbox Series X">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Xbox Series X</h5>
+                <p class="card-text flex-grow-1">Console mais potente da Microsoft, com gráficos em 4K.</p>
+                <p class="fw-bold text-primary">R$ 3.899,00</p>
+                <button class="btn btn-success mt-auto">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- God of War: Ragnarok -->
+          <div class="col-md-4" id="gow">
+            <div class="card h-100">
+              <img src="../img/ragnarok.png" class="card-img-top" alt="God of War: Ragnarok">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">God of War: Ragnarok</h5>
+                <p class="card-text flex-grow-1">God of War Ragnarök é uma aventura épica que continua a saga de Kratos e Atreus contra deuses nórdicos.</p>
+                <p class="fw-bold text-primary">R$ 299,90</p>
+                <button class="btn btn-success mt-auto">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Elden Ring -->
+          <div class="col-md-4" id="elden">
+            <div class="card h-100">
+              <img src="../img/eldenring.png" class="card-img-top" alt="Elden Ring">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text flex-grow-1">Elden Ring é um RPG de ação em mundo aberto que combina exploração, desafios intensos e narrativa épica.</p>
+                <p class="fw-bold text-primary">R$ 224,99</p>
+                <button class="btn btn-success mt-auto">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Witcher III -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="../img/TheWitcher3.webp" class="card-img-top" alt="The Witcher III">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">The Witcher III</h5>
+                <p class="card-text flex-grow-1">The Witcher 3 é um RPG de mundo aberto aclamado, repleto de missões complexas e narrativa envolvente.</p>
+                <p class="fw-bold text-primary">R$ 64,90</p>
+                <button class="btn btn-success mt-auto">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aside lateral -->
+      <div class="col-md-3">
+        <aside class="mb-4">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <i class="fa-solid fa-tags"></i> Promoções da Semana
+            </div>
+            <div class="card-body">
+              <p class="card-text">Descontos exclusivos em consoles e jogos selecionados!</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">PS5 - 15% OFF</li>
+                <li class="list-group-item">Elden Ring - 20% OFF</li>
+                <li class="list-group-item">Xbox Series X - 10% OFF</li>
+              </ul>
+              <a href="#" class="btn btn-primary btn-sm w-100">Ver Promoções</a>
+            </div>
+          </div>
+        </aside>
+
+        <aside>
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <i class="fa-solid fa-newspaper"></i> Novidades da Loja
+            </div>
+            <div class="card-body">
+              <p class="card-text">Fique por dentro dos lançamentos e eventos da nossa loja.</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Lançamento do GTA VI</li>
+                <li class="list-group-item">Evento de games - Outubro</li>
+              </ul>
+              <a href="novidades.html" class="btn btn-success btn-sm w-100">Veja Mais</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light mt-5">
+    <div class="container">
+      <div class="row align-items-center py-3">
+        <!-- Nav de links -->
+        <div class="col-md-6">
+          <nav class="navbar navbar-expand navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Trabalhe Conosco</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Nav de redes sociais -->
+        <div class="col-md-6 text-md-end">
+          <nav class="navbar navbar-expand navbar-dark justify-content-end">
+            <span class="navbar-text me-2">Siga-nos:</span>
+            <a class="btn btn-outline-light" href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
